@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#app {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#new-contact {
+    display: flex;
+}
+
+input {
+    margin: 5px;
+    padding: 10px;
+    width: calc(50% - 22px);
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #007BFF; /* Change background color on hover */
+    color: white; /* Change text color */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+
+h1, h2 {
+    text-align: left;
+}
+
+#contact-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contacts li {
+    display: flex;
+    list-style-type: none;
+    margin: 0%;
+}

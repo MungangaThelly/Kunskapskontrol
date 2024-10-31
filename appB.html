@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktlista</title>
+    <link rel="stylesheet" href="appB.css"> <!-- För CSS, om du använder det -->
+</head>
+<body>
+    <div id="app">
+        <h1>Lägg till en kontakt på lista</h1>
+        <div id="new-contact">
+            <input type="text" id="name" placeholder="Namn*" />
+            <input type="tel" id="phone" placeholder="Telefonnummer*" pattern="[0-9]*" inputmode="numeric"/>
+            <button id="add-contact">Skapa</button>
+            <button id="clear-list">Radera lista</button>
+        </div>
+        <div id="error-message" style="color: red;"></div> <!-- För felmeddelanden -->
+        <div id="contact-list">
+            <h2>Kontaktlista</h2>
+            <ul id="contacts"></ul>
+        </div>
+    </div>
+
+    <script src="appB.js"></script> <!-- För JavaScript -->
+</body>
+</html>
