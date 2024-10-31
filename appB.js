@@ -81,6 +81,11 @@ function clearContactList() {
 /*  Här är en förbättrad version av din kontaktlista-applikation som inkluderar de nya kraven. 
 Jag har lagt till funktioner för validering, felmeddelanden och en "Radera lista"-knapp.
 
+
+The validateInputs function checks both the name and phone number fields. It ensures the name field is not empty and that the phone number consists only of digits.
+The error messages are updated to provide clear feedback to the user if the validation fails, emphasizing that both fields must be filled and that the phone number must only contain numbers.
+This integration will enhance the user experience by preventing invalid input and ensuring that only valid contacts are added to the list.
+
 Förklaring av nya funktioner
 Validering: validateInputs-funktionen kontrollerar att båda textfälten är ifyllda innan en kontakt läggs till eller sparas.
 Felmeddelanden: Felmeddelanden visas i en div under kontaktfältet istället för med alert.
