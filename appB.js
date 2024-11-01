@@ -49,8 +49,6 @@ function addContactToList(contact) {
     contactsList.appendChild(createContactElement(contact)); // Use the new function
 }
 
-// ... (Rest of your code remains the same)
-
 function editContact(button) {
     const inputs = button.parentElement.getElementsByTagName('input');
     const isDisabled = inputs[0].disabled;
