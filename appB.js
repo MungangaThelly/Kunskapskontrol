@@ -15,8 +15,8 @@ document.getElementById('add-contact').addEventListener('click', function() {
         phone: phoneInput.value
     };
 
-    addContactToList(newContact);
-    
+    addContactToList(newContact); // Add contact
+
     // Töm fälten
     nameInput.value = '';
     phoneInput.value = '';
@@ -29,12 +29,11 @@ document.getElementById('clear-list').addEventListener('click', function() {
 });
 
 function validateInputs(name, phone) {
-    const phoneRegex = /^[0-9]+$/; // Regex to allow only digits
-    return name.trim() !== '' && phoneRegex.test(phone.trim()); // Check both fields
+    const phoneRegex = /^[0-9]+$/; // Regex for digits only
+    return name.trim() !== '' && phoneRegex.test(phone.trim()); // Check validity
 }
 
-function addContactToList(contact) {
-    const contactsList = document.getElementById('contacts');
+function createContactElement(contact) {
     const listItem = document.createElement('li');
     listItem.innerHTML = `
         <input type="text" value="${contact.name}" disabled />
@@ -42,8 +41,15 @@ function addContactToList(contact) {
         <button onclick="editContact(this)">Ändra</button>
         <button onclick="deleteContact(this)">Radera</button>
     `;
-    contactsList.appendChild(listItem);
+    return listItem; // Return the list item
 }
+
+function addContactToList(contact) {
+    const contactsList = document.getElementById('contacts');
+    contactsList.appendChild(createContactElement(contact)); // Use the new function
+}
+
+// ... (Rest of your code remains the same)
 
 function editContact(button) {
     const inputs = button.parentElement.getElementsByTagName('input');
@@ -72,13 +78,21 @@ function deleteContact(button) {
     listItem.remove();
 }
 
-function clearContactList() {
+function clearContactList() { 
     const contactsList = document.getElementById('contacts');
     contactsList.innerHTML = ''; // Radera alla kontakter
+
 }
 
 
-/*  Här är en förbättrad version av din kontaktlista-applikation som inkluderar de nya kraven. 
+
+
+/*  Key Points
+Event Listener: Listens for clicks to add a contact.
+Validation: Checks that inputs are filled and the phone number contains only digits.
+Creating Contact: Constructs the contact entry and appends it to the list.
+
+Här är en förbättrad version av min kontaktlista-applikation som inkluderar de nya kraven. 
 Jag har lagt till funktioner för validering, felmeddelanden och en "Radera lista"-knapp.
 
 
