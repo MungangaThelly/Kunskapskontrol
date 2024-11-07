@@ -25,7 +25,8 @@ button* {
     padding: 10px;
     margin: auto;
     transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
-}
+} 
+
 
 button:hover {
     background-color: #007bff; /* Change background color on hover */
@@ -47,4 +48,4 @@ h1, h2 {
     display: flex;
     list-style-type: none;
     margin: 0%;
-}
+} 
